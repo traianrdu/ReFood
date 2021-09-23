@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Aplicatii/Hackathon/EUDRES/ReFood/app/src/main/res/drawable/ic_close.xml" value="0.22135416666666666" />
         <entry key="..\:/Aplicatii/Hackathon/EUDRES/ReFood/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Aplicatii/Hackathon/EUDRES/ReFood/app/src/main/res/layout/company_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Aplicatii/Hackathon/EUDRES/ReFood/app/src/main/res/layout/customer_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Aplicatii/Hackathon/EUDRES/ReFood/app/src/main/res/layout/dialog_rewards.xml" value="0.20520833333333333" />
         <entry key="..\:/Aplicatii/Hackathon/EUDRES/ReFood/app/src/main/res/layout/main_customer.xml" value="0.20520833333333333" />
       </map>
     </option>

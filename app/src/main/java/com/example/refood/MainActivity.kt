@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             else {
-                Toast.makeText(this, "try again", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Try again", Toast.LENGTH_SHORT).show()
             }
         }
     }
