@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="restaurants">
+        <item>McDolovans - 1500pts Big Menu</item>
+        <item>McDolovans - 850pts Small Menu</item>
+        <item>Presco - 2100pts Food Voucher</item>
+        <item>Kentucky Fired Beef (KFB) - 1550pts Big Beef</item>
+        <item>Pizza King - 900pts Small Pizza</item>
+        <item>Ridr - 500pts Chocolate Ice Cream</item>
+    </string-array>
+</resources>
