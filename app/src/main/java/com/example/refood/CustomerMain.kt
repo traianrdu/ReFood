@@ -88,6 +88,32 @@ class CustomerMain : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
+        val map = findViewById<ImageView>(R.id.map)
+        map.setOnClickListener{
+            val alertDialog = AlertDialog.Builder(this, android.R.style.Theme_Light_NoTitleBar_Fullscreen)
+
+            val inflater: LayoutInflater =
+                this.layoutInflater // receive the inflater to create the view
+
+            val dialogView: View =
+                inflater.inflate(R.layout.dialog_rewards, null) // create the view
+
+            val closeDialogButton = dialogView.findViewById<ImageButton>(R.id.close_dialog_button)
+            val listView = dialogView.findViewById<ListView>(R.id.dialog_item_selection)
+            val title = dialogView.findViewById<TextView>(R.id.selection_text_dialog)
+            val mapdialog = dialogView.findViewById<ImageView>(R.id.map_dialog)
+            listView.visibility = View.GONE
+            title.text = "Map"
+            mapdialog.visibility=View.VISIBLE
+
+            alertDialog.setView(dialogView) // set the view
+
+            val dialog: AlertDialog = alertDialog.create()
+            closeDialogButton.setOnClickListener { dialog.dismiss() }
+
+            dialog.show()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
