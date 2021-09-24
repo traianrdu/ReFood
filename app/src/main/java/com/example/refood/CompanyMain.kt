@@ -3,7 +3,6 @@ package com.example.refood
 import android.R.attr
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidmads.library.qrgenearator.QRGContents
 import androidmads.library.qrgenearator.QRGEncoder
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +11,10 @@ import com.google.zxing.WriterException
 import android.R.attr.bitmap
 import android.graphics.Bitmap
 import android.util.Log
-import android.widget.ImageView
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 
 
 /**
@@ -43,6 +45,32 @@ class CompanyMain : AppCompatActivity() {
             // this method is called for
             // exception handling.
             Log.e("Tag", e.toString())
+        }
+
+        val mapCompany = findViewById<ImageView>(R.id.map_company)
+        mapCompany.setOnClickListener {
+            val alertDialog = AlertDialog.Builder(this, android.R.style.Theme_Light_NoTitleBar_Fullscreen)
+
+            val inflater: LayoutInflater =
+                this.layoutInflater // receive the inflater to create the view
+
+            val dialogView: View =
+                inflater.inflate(R.layout.dialog_rewards, null) // create the view
+
+            val closeDialogButton = dialogView.findViewById<ImageButton>(R.id.close_dialog_button)
+            val listView = dialogView.findViewById<ListView>(R.id.dialog_item_selection)
+            val title = dialogView.findViewById<TextView>(R.id.selection_text_dialog)
+            val mapdialog = dialogView.findViewById<ImageView>(R.id.map_dialog2)
+            listView.visibility = View.GONE
+            title.text = "Map"
+            mapdialog.visibility= View.VISIBLE
+
+            alertDialog.setView(dialogView) // set the view
+
+            val dialog: AlertDialog = alertDialog.create()
+            closeDialogButton.setOnClickListener { dialog.dismiss() }
+
+            dialog.show()
         }
     }
 

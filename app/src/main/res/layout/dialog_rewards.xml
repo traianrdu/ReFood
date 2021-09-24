@@ -63,4 +63,14 @@
         android:layout_alignParentEnd="true"
         android:src="@drawable/budapest"/>
 
+    <ImageView
+        android:id="@+id/map_dialog2"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/binmap"/>
+
 </RelativeLayout>
